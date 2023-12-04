@@ -1,4 +1,4 @@
-gi
+
 
 
 <!doctype html>
@@ -30,25 +30,51 @@ gi
     
 </head>
 
-<?php
-$link = mysqli_connect("localhost", "root", "", "food");
-
-echo"connected";
-
-?>
 
 <body>
 
 
+    <header class="container-fluid bg-primary" style="padding:25px 0;">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-8 col-3 col-sm-7 col-lg-8 col-xl-2 logo">
+                  <a href="index.html">
+                   		<img src="imgs/logo2.png" class="img-fluid" style="height:40px">
+                   </a>
+                </div>
+                <div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-8">
+                	<form>
+                        <div class="input-group">
+                          <input type="text" class="form-control bg-light text-DARK" style="border:none; border-radius:0;" placeholder="search food!!!">
+                          <div class="input-group-append">
+                            <button class="input-group-text bg-success text-light" style="border-radius:0; border:none;"><i class="fas fa-search"></i></button>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+               
+                <div class="col-md-4 col-9 col-sm-5 col-lg-4 col-xl-2 usersicons">
+                	<div>
+                    	<a href="login.html">
+                        	<i class="fas fa-user"></i>
+                        </a>
+                    	<a href="help.html">
+                        	<i class="fas fa-question"></i>
+                        </a>
+                      	<a href="cartpage.html">
+                        	<i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+
+                </div>
+                </div>
+                </header>
+                
 
 
 
-
-	<?php
-		
-		include 'header.php';
-		
-	?>
+	
     
     
     
@@ -95,11 +121,11 @@ echo"connected";
                         </div>
                         
                         <div class="form-group">
-                        <a href="login.php" class="btn btn-success form-control">Sign up</a>
+                        <a href="login.html" class="btn btn-success form-control">Sign up</a>
                         
                         
-                        <?php /*?><a href="index.php">
-                            <input  type="submit" class="form-control btn btn-success" name="submit" value="Sign up"> </a><?php */?>
+                      <a href="index.html">
+                            <input  type="submit" class="form-control btn btn-success" name="submit" value="Sign up"> </a>
                            
                             
                             
@@ -111,104 +137,86 @@ echo"connected";
             </div>
         </div>
     </section>
-    
-    
-    
-    
-<?php
 
-
-
-if(!$link)
-
-
-   {
-	die("could not coonect:".mysqli_error());
-	
-   }
-	
-	else
-	
-	{
-		
-		if(isset($_POST['submit']))
-		
-    {
-	
-	 
-    $name= $_POST['name'];
-    $number= $_POST['number'];
-    $email= $_POST['email'];
-    $pincode= $_POST['pincode'];
-	$address= $_POST['address'];
-	$password= $_POST['password'];
-	
-	
-         $sql="INSERT INTO signup (name, number, email, pincode, address, password)
-               VALUES('$name', '$number', '$email', '$pincode', '$address', '$password')";
-
-
-
-
-                  $qry = mysqli_query($link, $sql);
-
-                  if ($qry) 
-				  
-				  
-                     {
-						
-					 
-					 
-                 	 echo" you register sucessfully";
-					
-                      }
-
-   
-   
-                           else
-
-                           {
-						   echo"error" .$sql."<br>".mysqli_error($link);
-
-                           }
-      }
-		
-		
-			
-  }
-
-
-
-
-?>    
+    <footer class="container-fluid" style="background-color:#1D1D1D;">
+    	<div class="container">
+        	<div class="row pt-4 pb-5">
+            	<div class="col-md-6 col-12 col-sm-6 col-lg-2 col-xl-2">
+                	<div class="footlogo">
+                        <img src="imgs/logo2.png" class="img-fluid" style="height:40px;">
+                        <hr style="background-color:rgba(229,229,229,1.00);">
+                        <p style="font-size:15px; color:white;">
+                        	smart foods provides all our beloved customers the most best and healty foods
+                        </p>
+                    </div>
+                </div>
+            	<div class="col-md-6 col-12 col-sm-6 col-lg-2 col-xl-2 pt-3">
+                	<div class="text-left">
+                    	<h5 class="text-light">Links</h5>
+                        <ul class="links">
+                        	<li><a href="catagory.html">Vegitarian</a></li>
+                            <li><a href="catagory.html">Non Veg</a></li>
+                            <li><a href="catagory.html">Fruits</a></li>
+                            <li><a href="catagory.html">Nuts</a></li>
+                            <li><a href="catagory.html">protien Rich</a></li>
+                            <li><a href="catagory.html">Carb Foods</a></li>
+                            <li><a href="catagory.html">Snacks</a></li>
+                            <li><a href="catagory.html">Cakes</a></li>
+                            <li><a href="catagory.html">Shakes</a></li>
+                            <li><a href="catagory.html">Trending</a></li>
+                            <li><a href="catagory.html">Pizza</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-sm-6 col-lg-3 col-xl-3 pt-3">
+                	<div class="contacts text-left text-light">
+                    	<h5>Contact</h5>
+                    	<div class="row">
+                        	<div class="col-md-1 col-1 col-sm-1 col-lg-1 col-xl-1 p-0">
+                            	<i class="fas fa-map-marker-alt float-left pt-1"></i>
+                            </div>
+                            <div class="col-md-11 col-11 col-sm-11 col-lg-11 col-xl-11">
+                            	<p>Chicago Tower, 2nd & 3rd Floor Ikkanda Warrior Road, Near Malayala Manorama Thrissur, Kerala 680001</p>
+                            </div>
+                            <div class="col-md-1 col-1 col-sm-1 col-lg-1 col-xl-1 p-0">
+                            	<i class="fas fa-mobile-alt float-left pt-1"></i>
+                            </div>
+                            <div class="col-md-11 col-11 col-sm-11 col-lg-11 col-xl-11">
+                            	<p>+91 487 - 2385333,  Helpline: +91 9946 99 88 88</p>
+                            </div>
+                            <div class="col-md-1 col-1 col-sm-1 col-lg-1 col-xl-1 p-0">
+                            	<i class="fas fa-envelope float-left pt-1"></i>
+                            </div>
+                            <div class="col-md-11 col-11 col-sm-11 col-lg-11 col-xl-11 cont">
+                            	<p>mail@smartfoodcartgmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 col-sm-6 col-lg-5 col-xl-5">
+                  
+                	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15691.18165061645!2d76.219036!3d10.516774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1dc0d8b92cd2041d!2sSmart%20Media%20College%20Thrissur%20%7C%20Smart%20Scholarship%20Program!5e0!3m2!1sen!2sin!4v1635487581886!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <div class="social-icons">
+                    	<a href="https://www.facebook.com/smartmediacollegekerala" target="blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/user/smartinfoprism/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="row last-footer">
+        	 <div class="col-md-12">
+                <p class="text-light">© St Mary's College Thrissur</p>
+             </div>
+        </div>
+    </footer>
     
     
+ 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-<?php
-	include'footer.php';
-?>
-
-
 
 </body>
 </html>
