@@ -72,26 +72,128 @@
     
   </head>
   
-  <?php
-$link = mysqli_connect("localhost", "root", "", "food");
-
-//echo"connected";
-
-?>
+ 
   <body>
+
+
+<!--header part-->
+
+<header class="container-fluid bg-primary pt-4" id="headertop">
+    <div class="container">	
+        <div class="row">
+            <div class="col-md-7 col-3 col-sm-6 col-lg-8 col-xl-2 logo">
+               <a href="index.html">
+                       <img src="imgs/logo2.png" class="img-fluid" style="height:45px">
+               </a>
+            </div>
+            <div class="col-md-12 col-11 col-sm-11 col-lg-12 col-xl-8">
+                <div class="row">
+                    <div class="col-10 col-md-11 col-sm-11 col-lg-12 col-xl-12">
+                        <form action="" method="post">
+                            <div class="input-group search-bar">
+                              <input type="text" class="form-control bg-light text-DARK" placeholder="search food!!!">
+                              <div class="input-group-append">
+                                <button class="input-group-text text-light bg-success"><i class="fas fa-search p-0"></i></button>
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!--toggle part-->
+                    <div class="col-2 col-md-1 col-sm-1 col-lg-12 col-xl-12 toggle">
+                        <div id="mySidenav" class="sidenav">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div>
+                                <div class="mb-1">
+                                   <div>
+                                        <h4 class="text-dark">catagories :</h4>
+                                        <h6><a href="catagory.html">Vegitarian</a></h6>
+                                        <h6><a href="catagory.html">Non Veg</a></h6>
+                                        <h6><a href="catagory.html">Fruits</a></h6>
+                                        <h6><a href="catagory.html">Nuts</a></h6>
+                                        <h6><a href="catagory.html">protien Rich</a>
+                                        <h6><a href="catagory.html">Carb Foods</a></h6>
+                                        <h6><a href="catagory.html">Snacks</a></h6>
+                                        <h6><a href="catagory.html">Cakes</a></h6>
+                                        <h6><a href="catagory.html">Shakes</a></h6>
+                                        <h6><a href="catagory.html">Trending</a></h6>
+                                        <h6><a href="catagory.html">Pizza</a></h6>
+                                   </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                         <span onclick="openNav()">&#9776;</span>
+                    </div>
+                </div>
+            </div>
+          
+            <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "100%";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+
+                 
+          <!--icons part-->
+            
+            <div class="col-md-5 col-9 col-sm-6 col-lg-4 col-xl-2 usersicons">
+                <div><a href="help.html"><i class="fas fa-question"></i></a></div>
+                <div><a href="cartpage.html"><i class="fas fa-shopping-cart"></i></a></div>
+                <div><a href="login.html"><i class="fas fa-user"></i></a></div>
+                <div><a href="#" id="myBtn"><i class="fas fa-map-marker-alt"></i></a></div>
+                
+                
+                <!-- The Modal box-->
+                <div id="myModal" class="modal">
+                    <div class="modal-content locationmodal bg-light">
+                        <div class="modal-header">
+                              <h6 class="pt-3">Add Location</h6>
+                            <span id="locationmodal" class="close" onClick="closemodal()"><i class="fas fa-times-circle"></i></span>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12">
+                                    <form action="" method="post" class="modalloc pt-5 pb-3">
+                                        <div class="input-group">
+                                              <input type="text" class="form-control" placeholder="add location" />
+                                              <div class="input-group-append">
+                                                 <input class="btn btn-success" type="submit" value="add"/>
+                                               </div>
+                                        </div>
+                                    </form>
+                                    <p>add location to have a better experience with shopping. Wishing you a wonderful day </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<script src="js/modal.js"></script>
+
+
 
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="<!--index.html-->"><span ><i class="fa-solid fa-address-card"></i></span>Admin</a></h1>
+			<h1 id="colorlib-logo"><a href="index.html"><span ><i class="fa-solid fa-address-card"></i></span>Admin</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="index.html">Home</a></li>
-                    <li class="colorlib-active"><a href="catagory.php">Add catagory</a></li>
-					<li ><a href="product.php">Add products</a></li>
-					<li><a href="custumer.php">View custumer</a></li>
-					<li><a href="booking.php">View booking</a></li>
-					<li ><a href="logout.php">Logout</a></li>
+                    <li class="colorlib-active"><a href="catagory.html">Add catagory</a></li>
+					<li ><a href="product.html">Add products</a></li>
+					<li><a href="custumer.html">View custumer</a></li>
+					<li><a href="booking.html">View booking</a></li>
+					<li ><a href="logout.html">Logout</a></li>
 				</ul>
 			</nav>
             <div class="colorlib-footer">
@@ -182,65 +284,7 @@ $link = mysqli_connect("localhost", "root", "", "food");
              
              
              
-             
-             
-             
-             
- <?php
-
-
-
-if(!$link)
-
-
-   {
-	die("could not coonect:".mysqli_error());
-	
-   }
-	
-	else
-	
-	{
-		
-		if(isset($_POST['submit']))
-		
-    {
-	
-	 
-    $catname= $_POST['catname'];
-    
-	
-	
-         $sql="INSERT INTO catagory (catname)
-               VALUES('$catname')";
-			   
-        $qry = mysqli_query($link, $sql);
-
-                  if ($qry) 
-				  
-				  
-                     {
-                     echo" you register sucessfully";
-                      }
-
-                        else
-
-                           {
-						   echo"error" .$sql."<br>".mysqli_error($link);
-                           }
-      }
-					
-  }
-?>                
-             
-             
-             
-             
-             
-             
-             
-             
-             
+              
              
              
              
